@@ -1,0 +1,97 @@
+@import 'variables.scss';
+
+:host {
+  display: block;
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: $grey-light;
+}
+
+.product-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+input, textarea {
+  padding: 8px 10px;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  border-color: $blue;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.preview {
+  align-self: center;
+  img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid $grey;
+    border-radius: 4px;
+  }
+}
+
+button[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  background-color: $blue;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: $blue-dark;
+}
+
+.btn-back {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #6c757d;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}

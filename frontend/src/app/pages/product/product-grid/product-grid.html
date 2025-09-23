@@ -1,0 +1,26 @@
+<h2 class="section-title">Visualização dos produtos</h2>
+
+<div class="filters">
+  <app-filters (handleFilter)="handleFilter($event)"></app-filters>
+</div>
+
+<div class="container">
+  <div class="grid">
+    @for (p of products(); track p.id) {
+      <div class="card">
+        <img [ngSrc]="p.image_url" [alt]="p.name" height="150" width="252" loading="lazy"/>
+        <h3>{{p.name}}</h3>
+        <p class="price">{{p.price | currency:'BRL'}}</p>
+        <p>{{p.description}}</p>
+      </div>
+    }
+  </div>
+  
+  <app-pagination 
+  [showItemsPerPage]="false" 
+  [currentPage]="currentPage()" 
+  [totalItems]="totalItems()"
+  [itemsPerPage]="itemsPerPage()"
+  (handlePage)="handleFilter(undefined, $event)"
+  ></app-pagination>
+</div>

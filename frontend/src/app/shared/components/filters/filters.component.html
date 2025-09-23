@@ -1,0 +1,30 @@
+<div class="filter-container">
+
+<input
+  type="text"
+  placeholder="Buscar produto..."
+  [(ngModel)]="filters().search"
+  (input)="applyFilters()"
+/>
+
+<select [(ngModel)]="filters().category" (change)="applyFilters()">
+  <option value="">Todas categorias</option>
+  @for (cat of categories; track cat) {
+    <option [value]="cat">{{ cat }}</option>
+  }
+</select>
+
+<input
+  type="number"
+  placeholder="Preço mínimo"
+  [(ngModel)]="filters().priceMin"
+  (input)="applyFilters()"
+/>
+
+<input
+  type="number"
+  placeholder="Preço máximo"
+  [(ngModel)]="filters().priceMax"
+  (input)="applyFilters()"
+  />
+</div>

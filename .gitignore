@@ -1,0 +1,95 @@
+# =====================
+# Root
+# =====================
+
+# Logs
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+/media/products/*
+
+
+# =====================
+# Backend (Django / Python)
+# =====================
+/backend/__pycache__/
+/backend/*.py[cod]
+/backend/.Python
+/backend/env/
+/backend/.venv/
+/backend/*.sqlite3
+/backend/media/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+*.env
+
+*.so
+
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+.pytest_cache/
+
+.idea/
+.vscode/
+
+# =====================
+# Frontend (Angular / Node)
+# =====================
+/frontend/node_modules/
+/frontend/dist/
+/frontend/tmp/
+/frontend/.angular/
+/frontend/.vite/
+/frontend/.cache/
+/frontend/out-tsc/
+/frontend/package-lock.json
+/frontend/yarn.lock
+/frontend/npm-debug.log*
+/frontend/.env
+
+# Angular specific
+/frontend/.angular/cache
+/frontend/.angular/build-cache
+
+# Vite cache
+/frontend/.vite/
+
+# Build output
+/frontend/dist/
+/frontend/build/
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# =====================
+# Misc
+# =====================
+*.swp
+*.tmp
+*.bak
+

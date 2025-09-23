@@ -1,0 +1,57 @@
+<h2>Lista de Produtos</h2>
+
+<div class="filter-bar">
+  <app-filters (handleFilter)="handleFilter($event)"></app-filters>
+
+  <div class="actions">
+    <a routerLink="/products/new">Novo produto</a>
+    <button class="report" (click)="generateReport()">Gerar Relatório</button>
+    <a routerLink="/" target="_blank">Visualização</a>
+  </div>
+</div>
+
+<table>
+  <colgroup>
+    <col class="id">
+    <col class="name">
+    <col class="category">
+    <col class="price">
+    <col class="stock">
+    <col class="table-actions">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Índice</th>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Categoria</th>
+      <th>Estoque</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (p of products(); track p.id) {
+      <tr>
+        <td class="id">{{p.id}}</td>
+        <td class="name">{{p.name}}</td>
+        <td>{{p.category}}</td>
+        <td>{{p.price | currency:'BRL'}}</td>
+        <td>{{p.stock}}</td>
+        <td class="table-actions">
+          <a [routerLink]="['/products', p.id, 'edit']">Editar</a>
+          <button class="delete" (click)="deleteProd(p.id)">Apagar</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<app-pagination
+  [currentPage]="currentPage()"
+  [itemsPerPage]="itemsPerPage()"
+  [totalItems]="totalItems()"
+  (handlePage)="handleFilter(undefined, $event)"
+  (handleItemsPerPage)="handleItemsPerPage($event)"
+></app-pagination>
+
+<app-bar-chart [data]="products()"></app-bar-chart>

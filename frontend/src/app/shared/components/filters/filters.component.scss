@@ -1,0 +1,21 @@
+@import 'variables.scss';
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  input, select {
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid $border;
+    font-size: 0.95rem;
+  }
+
+  button.report {
+    margin-left: auto;
+    background-color: $blue;
+    color: $white;
+    font-weight: 600;
+  }
+}
