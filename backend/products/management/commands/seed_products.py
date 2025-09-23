@@ -16,7 +16,6 @@ class Command(BaseCommand):
                 "category": "Eletrônicos",
                 "price": 299.08,
                 "stock": 98,
-                "image_url": "/media/products/airpods.jpeg",
             },
             {
                 "id": 2,
@@ -25,7 +24,6 @@ class Command(BaseCommand):
                 "category": "Eletrônicos",
                 "price": 8099.00,
                 "stock": 112,
-                "image_url": "/media/products/macbook.jpeg",
             },
             {
                 "id": 3,
@@ -191,7 +189,7 @@ class Command(BaseCommand):
             { "id": 38, "name": "Bolsa de Couro", "description": "Estilosa e resistente.", "category": "Moda", "price": "450.00", "stock": 30},
         ]
 
-        image_path = os.path.join(settings.BASE_DIR, "media", "products", "teste.jpg")
+        image_path = os.path.join(settings.BASE_DIR, "media", "teste.jpg")
 
         if not os.path.exists(image_path):
             self.stdout.write(self.style.ERROR(f"Imagem não encontrada: {image_path}"))

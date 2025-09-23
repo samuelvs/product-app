@@ -25,7 +25,6 @@ Thumbs.db
 /backend/env/
 /backend/.venv/
 /backend/*.sqlite3
-/backend/media/
 *.pyc
 *.pyo
 *.pyd

@@ -52,7 +52,7 @@ Isso criará um container PostgreSQL na porta padrão 5432.
 
 ```bash
 cd backend
-cp .env-example .env       # lembre de preencher o que for necessário
+cp .env.example .env       # lembre de preencher o que for necessário
 python -m venv .venv       # Ou python3 se for o caso -> python3 -m venv .venv 
 source .venv/bin/activate  # macOS/Linux
 .venv\Scripts\activate     # Windows
@@ -100,19 +100,25 @@ A API estará disponível em: `http://localhost:8000/api/products/`
 cd frontend
 ```
 
-2. Instale dependências:
+2. Mude para a versão node do projeto:
+
+```bash
+nvm use       # Caso não possua a v20.19 -> nvm install v20.19
+```
+
+4. Instale dependências:
 
 ```bash
 npm install
 ```
 
-3. Rode a aplicação Angular:
+5. Rode a aplicação Angular:
 
 ```bash
 npm run start
 ```
 
-A aplicação estará disponível em: `http://localhost:4200`
+A aplicação estará disponível em: `http://localhost:4200/products` para gerenciamento e dashboard e `http://localhost:4200` para o grid.
 
 ## Funcionalidades
 
