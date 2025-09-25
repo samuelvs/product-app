@@ -20,6 +20,12 @@ services:
       start_period: 10s
 
   backend:
+    environment:
+      DB_NAME: productsdb
+      DB_USER: productuser
+      DB_PASS: productpass
+      DB_HOST: db
+      DB_PORT: 5432
     build:
       context: ./backend
       dockerfile: Dockerfile
