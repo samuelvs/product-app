@@ -4,8 +4,8 @@
   <form [formGroup]="form" (ngSubmit)="submit()" class="product-form">
     <div class="form-row">
       <div class="form-group">
-        <label>Nome</label>
-        <input formControlName="name" />
+        <label for="nameInput">Nome</label>
+        <input id="nameInput" formControlName="name" />
         @if (form.get('name')?.invalid && form.get('name')?.touched) {
           <div class="error">
             Nome obrigatório
@@ -14,8 +14,8 @@
       </div>
       
       <div class="form-group">
-        <label>Categoria</label>
-        <select formControlName="category">
+        <label for="categorySelect">Categoria</label>
+        <select id="categorySelect" formControlName="category">
           <option value="">Todas categorias</option>
           @for (cat of categories; track cat) {
             <option [value]="cat">{{ cat }}</option>
@@ -26,24 +26,24 @@
 
     <div class="form-row">
       <div class="form-group">
-        <label>Preço</label>
-        <input formControlName="price" type="number" step="0.01" />
+        <label for="priceInput">Preço</label>
+        <input id="priceInput" formControlName="price" type="number" step="0.01" />
       </div>
 
       <div class="form-group">
-        <label>Estoque</label>
-        <input formControlName="stock" type="number" />
+        <label for="stockInput">Estoque</label>
+        <input id="stockInput" formControlName="stock" type="number" />
       </div>
     </div>
 
     <div class="form-group description">
-      <label>Descrição</label>
-      <textarea formControlName="description"></textarea>
+      <label for="descriptionTextarea">Descrição</label>
+      <textarea id="descriptionTextarea" formControlName="description"></textarea>
     </div>
 
     <div class="form-group">
-      <label>Imagem</label>
-      <input type="file" (change)="onFileChange($event)" />
+      <label for="imageInput">Imagem</label>
+      <input id="imageInput" type="file" (change)="onFileChange($event)" />
       @if (previewUrl()) {
         <div class="preview">
           <img [src]="'http://localhost:8000' + previewUrl()" />

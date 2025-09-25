@@ -7,7 +7,6 @@ Aplicação de loja simples com CRUD de produtos, filtros, listagem e grid de pr
 - Docker >= 24
 - Docker Compose >= 2
 
-
 ## Tecnologias utilizadas no projeto
 
 - **Backend**: Django 4.x, Django REST Framework
@@ -34,8 +33,10 @@ product-app/
   - **SEO**, já que o conteúdo é renderizado no servidor e indexável pelos buscadores.
   - Compartilhamento de URLs completas em redes sociais com preview do conteúdo.
 
+- O layout é totalmente responsivo, funcionando bem em desktops, tablets e dispositivos móveis.
 - Todas as imagens de produtos estão no diretório `media/products/` do backend.
 - **Lazy load de imagens** otimiza o carregamento em listas e grids, reduzindo o uso de banda.
+- A filtragem da Lista de produtos também filtra o que aparece no gráfico e no relatório.
 - O frontend consome a API Django via `http://localhost:8000/api/products/`.
 
 ## Configuração do banco com Docker

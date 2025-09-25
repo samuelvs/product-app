@@ -5,19 +5,26 @@
   flex-wrap: wrap;
   gap: 1rem;
 
+  span {
+    flex: 1 1 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    text-align: left;
+  }
+
   input, select {
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
     border: 1px solid $border;
     font-size: 0.95rem;
-    width: 50%;
-    flex: 1 1 200px;
   }
 
   .prices {
     display: flex;
     gap: 16px;
-    flex: 1 1 266px;
+    flex-wrap: wrap;
   }
 
   button {
@@ -29,6 +36,8 @@
     transition: background-color 0.2s;
     background-color: $green;
     color: $white;
+    margin-bottom: 6px;
+    align-self: end;
     
     &:hover {
      background-color: $green-hover;

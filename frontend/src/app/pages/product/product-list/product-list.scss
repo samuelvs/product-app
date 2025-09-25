@@ -44,6 +44,8 @@ main {
 .actions {
   display: flex;
   gap: 1rem;
+  place-self: end;
+  margin-bottom: 6px; 
 }
 
 h2 {

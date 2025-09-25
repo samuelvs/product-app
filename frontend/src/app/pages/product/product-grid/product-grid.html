@@ -1,4 +1,6 @@
-<h2 class="section-title">Produtos</h2>
+<header>
+  <h2 class="section-title">Produtos</h2>
+</header>
 
 <main>  
   <div class="filters">
@@ -10,7 +12,13 @@
     <div class="grid">
       @for (p of products(); track p.id) {
         <div class="card">
-          <img [ngSrc]="'http://localhost:8000'+p.image_url" [alt]="p.name" height="150" width="252" loading="lazy"/>
+          <img 
+            [ngSrc]="'http://localhost:8000' + p.image_url"
+            [alt]="p.name"
+            height="150"
+            width="252"
+            loading="lazy"
+          />
           <h3>{{p.name}}</h3>
           <p class="price">{{p.price | currency:'BRL'}}</p>
           <p>{{p.description}}</p>

@@ -1,35 +1,51 @@
 <div class="filter-container">
+  <span>
+    <label for="searchInput">Buscar produto:</label>
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Ex.: Cadeira"
+      [(ngModel)]="filters().search"
+      (input)="applyFilters()"
+    />
+  </span>
 
-<input
-  type="text"
-  placeholder="Buscar produto..."
-  [(ngModel)]="filters().search"
-  (input)="applyFilters()"
-/>
+  <span>
+    <label for="categorySelect">Categoria:</label>
+    <select
+        id="categorySelect"
+      [(ngModel)]="filters().category"
+      (change)="applyFilters()">
+      <option value="">Todas categorias</option>
+      @for (cat of categories; track cat) {
+          <option [value]="cat">{{ cat }}</option>
+        }
+    </select>
+  </span>
 
-<select [(ngModel)]="filters().category" (change)="applyFilters()">
-  <option value="">Todas categorias</option>
-  @for (cat of categories; track cat) {
-    <option [value]="cat">{{ cat }}</option>
-  }
-</select>
+  <div class="prices">
+    <span>
+      <label for="priceMinInput">Preço mínimo:</label>
+      <input
+        id="priceMinInput"
+        type="number"
+        placeholder="Ex.: 100"
+        [(ngModel)]="filters().priceMin"
+        (input)="applyFilters()"
+    />
+    </span>
 
-<div class="prices">
-  <input
-    type="number"
-    placeholder="Preço mínimo"
-    [(ngModel)]="filters().priceMin"
-    (input)="applyFilters()"
-  />
-  
-  <input
-    type="number"
-    placeholder="Preço máximo"
-    [(ngModel)]="filters().priceMax"
-    (input)="applyFilters()"
-  />
-</div>
+    <span>
+      <label for="priceMaxInput">Preço máximo:</label>
+      <input
+        id="priceMaxInput"
+        type="number"
+        placeholder="Ex.: 1000"
+        [(ngModel)]="filters().priceMax"
+        (input)="applyFilters()"
+      />
+    </span>
+  </div>
 
-<button class="clean" (click)="handleCleanFilters()">Limpar</button>
-
+  <button class="clean" (click)="handleCleanFilters()">Limpar</button>
 </div>
