@@ -31,7 +31,7 @@ export class ProductListComponent implements OnInit {
   ) {}
 
   ngOnInit() { 
-    this.load();
+    this.load(this.filters());
   }
 
   load(filters?: ProductFilter) {

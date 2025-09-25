@@ -25,14 +25,24 @@ export class FiltersComponent {
 
   private filterSubject = new Subject<void>();
 
-  ngOnInit() { 
+  ngOnInit(): void { 
     this.filterSubject.pipe(
       debounceTime(300),
       tap(() => this.handleFilter.emit(this.filters()))
     ).subscribe();
   }
 
-  applyFilters() {
+  applyFilters(): void {
     this.filterSubject.next();
+  }
+
+  handleCleanFilters(): void {
+    this.filters.set({
+      search: '',
+      category: '',
+      priceMin: null,
+      priceMax: null
+    });
+    this.applyFilters();
   }
 }

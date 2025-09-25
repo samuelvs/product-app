@@ -1,20 +1,56 @@
-version: '3.8'
+version: "3.9"
+
 services:
   db:
     image: postgres:15
-    restart: always
+    container_name: product-app-db
     environment:
-      POSTGRES_DB: productsdb
       POSTGRES_USER: productuser
       POSTGRES_PASSWORD: productpass
+      POSTGRES_DB: productsdb
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U productuser"]
+      test: ["CMD-SHELL", "pg_isready -U productuser -d productsdb"]
       interval: 5s
+      timeout: 5s
       retries: 5
+      start_period: 10s
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: product-app-backend
+    entrypoint: ["/app/entrypoint.sh"]
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py seed_products &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: product-app-frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "4200:4200"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - backend
 
 volumes:
-  pgdata:
+  postgres_data:

@@ -1,50 +1,57 @@
-<h2>{{ currentId() ? 'Editar' : 'Novo' }} Produto</h2>
+<main>
+  <h2>{{ currentId() ? 'Editar' : 'Novo' }} Produto</h2>
 
-<form [formGroup]="form" (ngSubmit)="submit()" class="product-form">
-  <div class="form-row">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="product-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nome</label>
+        <input formControlName="name" />
+        @if (form.get('name')?.invalid && form.get('name')?.touched) {
+          <div class="error">
+            Nome obrigatório
+          </div>
+        }
+      </div>
+      
+      <div class="form-group">
+        <label>Categoria</label>
+        <select formControlName="category">
+          <option value="">Todas categorias</option>
+          @for (cat of categories; track cat) {
+            <option [value]="cat">{{ cat }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Preço</label>
+        <input formControlName="price" type="number" step="0.01" />
+      </div>
+
+      <div class="form-group">
+        <label>Estoque</label>
+        <input formControlName="stock" type="number" />
+      </div>
+    </div>
+
+    <div class="form-group description">
+      <label>Descrição</label>
+      <textarea formControlName="description"></textarea>
+    </div>
+
     <div class="form-group">
-      <label>Nome</label>
-      <input formControlName="name" />
-      @if (form.get('name')?.invalid && form.get('name')?.touched) {
-        <div class="error">
-          Nome obrigatório
+      <label>Imagem</label>
+      <input type="file" (change)="onFileChange($event)" />
+      @if (previewUrl()) {
+        <div class="preview">
+          <img [src]="'http://localhost:8000' + previewUrl()" />
         </div>
       }
     </div>
-    
-    <div class="form-group">
-      <label>Categoria</label>
-      <input formControlName="category" />
-    </div>
-  </div>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label>Preço</label>
-      <input formControlName="price" type="number" step="0.01" />
-    </div>
-
-    <div class="form-group">
-      <label>Estoque</label>
-      <input formControlName="stock" type="number" />
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label>Descrição</label>
-    <textarea formControlName="description"></textarea>
-  </div>
-
-  <div class="form-group">
-    <label>Imagem</label>
-    <input type="file" (change)="onFileChange($event)" />
-    @if (previewUrl()) {
-      <div class="preview">
-        <img [src]="previewUrl()" />
-      </div>
-    }
-  </div>
-
-  <button type="button" class="btn-back" (click)="goBack()">← Voltar</button>
-  <button type="submit">Salvar</button>
-</form>
+    <button type="button" class="btn-back" (click)="goBack()">← Voltar</button>
+    <button type="submit">Salvar</button>
+  </form>
+</main>

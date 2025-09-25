@@ -16,6 +16,7 @@ class Command(BaseCommand):
                 "category": "Eletrônicos",
                 "price": 299.08,
                 "stock": 98,
+                "image": "airpods.jpeg"
             },
             {
                 "id": 2,
@@ -24,6 +25,7 @@ class Command(BaseCommand):
                 "category": "Eletrônicos",
                 "price": 8099.00,
                 "stock": 112,
+                "image": "macbook.jpeg"
             },
             {
                 "id": 3,
@@ -31,7 +33,8 @@ class Command(BaseCommand):
                 "description": "Televisor LED 4K com HDR, acesso a apps de streaming e design slim.",
                 "category": "Eletrônicos",
                 "price": 2899.90,
-                "stock": 45
+                "stock": 45,
+                "image": "smarttv55.webp"
             },
             {
                 "id": 4,
@@ -39,7 +42,9 @@ class Command(BaseCommand):
                 "description": "Geladeira duplex frost free com baixo consumo de energia e amplo espaço interno.",
                 "category": "Eletrodomésticos",
                 "price": 2199.50,
-                "stock": 27
+                "stock": 27,
+                "image": "geladeira.jpeg"
+
             },
             {
                 "id": 5,
@@ -47,7 +52,8 @@ class Command(BaseCommand):
                 "description": "Fogão à gás com forno autolimpante e acabamento em inox.",
                 "category": "Eletrodomésticos",
                 "price": 749.90,
-                "stock": 35
+                "stock": 35,
+                "image": "fogao.jpeg"
             },
             {
                 "id": 6,
@@ -55,7 +61,8 @@ class Command(BaseCommand):
                 "description": "Sofá retrátil e reclinável, estofado em tecido de alta durabilidade.",
                 "category": "Móveis",
                 "price": 1599.00,
-                "stock": 20
+                "stock": 20,
+                "image": "sofa.jpeg"
             },
             {
                 "id": 7,
@@ -63,7 +70,8 @@ class Command(BaseCommand):
                 "description": "Mesa em madeira maciça com cadeiras estofadas, perfeita para salas de jantar.",
                 "category": "Móveis",
                 "price": 1299.00,
-                "stock": 15
+                "stock": 15,
+                "image": "mesa.jpeg"
             },
             {
                 "id": 8,
@@ -71,7 +79,8 @@ class Command(BaseCommand):
                 "description": "Smartphone com câmera tripla, tela AMOLED e performance avançada.",
                 "category": "Eletrônicos",
                 "price": 4599.00,
-                "stock": 50
+                "stock": 50,
+                "image": "celular.jpeg"
             },
             {
                 "id": 9,
@@ -79,7 +88,8 @@ class Command(BaseCommand):
                 "description": "Micro-ondas com grill, funções pré-programadas e painel digital intuitivo.",
                 "category": "Eletrodomésticos",
                 "price": 499.90,
-                "stock": 40
+                "stock": 40,
+                "image": "micro.jpeg"
             },
             {
                 "id": 10,
@@ -87,7 +97,8 @@ class Command(BaseCommand):
                 "description": "Cadeira ergonômica com ajuste de altura, apoio de braços e design moderno.",
                 "category": "Móveis",
                 "price": 899.00,
-                "stock": 25
+                "stock": 25,
+                "image": "cadeira.jpeg"
             },
             {
                 "id": 11,
@@ -95,7 +106,8 @@ class Command(BaseCommand):
                 "description": "Fone de ouvido sem fio com redução de ruído ativa e bateria de longa duração.",
                 "category": "Eletrônicos",
                 "price": 499.90,
-                "stock": 60
+                "stock": 60,
+                "image": "fone.jpeg"
             },
             {
                 "id": 12,
@@ -103,7 +115,8 @@ class Command(BaseCommand):
                 "description": "Notebook potente com placa de vídeo dedicada, ideal para jogos e design gráfico.",
                 "category": "Eletrônicos",
                 "price": 9999.00,
-                "stock": 30
+                "stock": 30,
+                "image": "notebook.jpeg"
             },
             {
                 "id": 13,
@@ -111,7 +124,8 @@ class Command(BaseCommand):
                 "description": "Ar condicionado split frio com baixo consumo energético e operação silenciosa.",
                 "category": "Eletrodomésticos",
                 "price": 1899.00,
-                "stock": 22
+                "stock": 22,
+                "image": "ar.jpeg"
             },
             {
                 "id": 14,
@@ -119,7 +133,8 @@ class Command(BaseCommand):
                 "description": "Lavadora automática com múltiplos programas e função econômica de água e energia.",
                 "category": "Eletrodomésticos",
                 "price": 1799.50,
-                "stock": 18
+                "stock": 18,
+                "image": "lava.jpeg"
             },
             {
                 "id": 15,
@@ -127,7 +142,8 @@ class Command(BaseCommand):
                 "description": "Cama box casal com colchão ortopédico de alta densidade e tecido respirável.",
                 "category": "Móveis",
                 "price": 1299.00,
-                "stock": 12
+                "stock": 12,
+                "image": "cama.jpeg"
             },
             {
                 "id": 16,
@@ -135,7 +151,8 @@ class Command(BaseCommand):
                 "description": "Estante em MDF com múltiplas prateleiras e design moderno para sala ou escritório.",
                 "category": "Móveis",
                 "price": 749.00,
-                "stock": 25
+                "stock": 25,
+                "image": "estante.jpeg"
             },
             {
                 "id": 17,
@@ -143,7 +160,8 @@ class Command(BaseCommand):
                 "description": "Smartwatch com monitoramento de atividades físicas, notificações e resistência à água.",
                 "category": "Eletrônicos",
                 "price": 799.90,
-                "stock": 55
+                "stock": 55,
+                "image": "relogio.jpeg"
             },
             {
                 "id": 18,
@@ -151,7 +169,8 @@ class Command(BaseCommand):
                 "description": "Cafeteira com programação automática, jarra térmica e funções de preparo rápido.",
                 "category": "Eletrodomésticos",
                 "price": 349.90,
-                "stock": 40
+                "stock": 40,
+                "image": "cafeteira.jpeg"
             },
             {
                 "id": 19,
@@ -159,7 +178,8 @@ class Command(BaseCommand):
                 "description": "Mesa em madeira MDF com gavetas, ideal para home office ou estudo.",
                 "category": "Móveis",
                 "price": 499.90,
-                "stock": 20
+                "stock": 20,
+                "image": "mesa-escritorio.jpeg"
             },
             {
                 "id": 20,
@@ -167,7 +187,8 @@ class Command(BaseCommand):
                 "description": "Câmera compacta com zoom óptico 10x, gravação em Full HD e conectividade Wi-Fi.",
                 "category": "Eletrônicos",
                 "price": 1299.00,
-                "stock": 15
+                "stock": 15,
+                "image": "camera.jpeg"
             },
             { "id": 21, "name": "iPhone 15", "description": "Smartphone premium.", "category": "Eletrônicos", "price": "6999.99", "stock": 55},
             { "id": 22, "name": "Cafeteira Expresso", "description": "Para café gourmet em casa.", "category": "Casa", "price": "499.50", "stock": 40},
@@ -189,16 +210,23 @@ class Command(BaseCommand):
             { "id": 38, "name": "Bolsa de Couro", "description": "Estilosa e resistente.", "category": "Moda", "price": "450.00", "stock": 30},
         ]
 
-        image_path = os.path.join(settings.BASE_DIR, "media", "teste.jpg")
+        media_dir = os.path.join(settings.BASE_DIR, "media")
+        fallback_image_path = os.path.join(settings.BASE_DIR, "media/teste.jpg")
 
-        if not os.path.exists(image_path):
-            self.stdout.write(self.style.ERROR(f"Imagem não encontrada: {image_path}"))
+        if not os.path.exists(fallback_image_path):
+            self.stdout.write(self.style.ERROR(f"Imagem de fallback não encontrada: {fallback_image_path}"))
             return
 
-        with open(image_path, "rb") as f:
-            image_file = File(f, name="teste.jpg")
+        for p in products_data:
+            image_name = p.get("image")
+            image_path = os.path.join(media_dir, image_name) if image_name else fallback_image_path
 
-            for p in products_data:
+            if not os.path.exists(image_path):
+                self.stdout.write(self.style.WARNING(f"Imagem não encontrada para {p['name']}, usando fallback."))
+                image_path = fallback_image_path
+
+            with open(image_path, "rb") as f:
+                image_file = File(f, name=os.path.basename(image_path))
                 product_obj, created = Product.objects.update_or_create(
                     name=p["name"],
                     defaults={
@@ -209,9 +237,10 @@ class Command(BaseCommand):
                         "image": image_file
                     }
                 )
-                if created:
-                    self.stdout.write(self.style.SUCCESS(f"Produto criado: {p['name']}"))
-                else:
-                    self.stdout.write(self.style.SUCCESS(f"Produto atualizado: {p['name']}"))
+
+            if created:
+                self.stdout.write(self.style.SUCCESS(f"Produto criado: {p['name']}"))
+            else:
+                self.stdout.write(self.style.SUCCESS(f"Produto atualizado: {p['name']}"))
 
         self.stdout.write(self.style.SUCCESS("Seed de produtos finalizado!"))

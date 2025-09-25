@@ -8,14 +8,22 @@
   background-color: $grey-light;
 }
 
+main {
+  max-width: 1400px;
+  margin: auto;
+}
+
 .filter-bar {
   display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5em;
+  text-align: center;
 
   a {
-    background-color: $blue;
+    background-color: $green;
     color: $white;
     padding: 0.4rem 0.8rem;
     border: none;
@@ -25,10 +33,11 @@
     text-decoration: unset;
     transition: background-color 0.2s;
     font-size: 13.333px;
+    align-content: center;
   }
 
   a:hover {
-    background-color: $blue-hover;
+    background-color: $green-hover;
   }
 }
 
@@ -37,7 +46,7 @@
   gap: 1rem;
 }
 
-h1 {
+h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: $font-color;
@@ -50,11 +59,13 @@ h1 {
 
 table {
   width: 100%;
+  display: block;
+  overflow-x: auto;
   border-collapse: collapse;
   background-color: $white;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
   table-layout: fixed;
   border: 1px solid #d1d5db;
+  box-shadow: 0 0 12px $black-shadow;
 
   tr:nth-child(even) {
     background-color: #f9fafb;
@@ -98,6 +109,8 @@ table {
   .table-actions {
     display: flex;
     gap: 8px;
+    width: 100%;
+    justify-content: end;
   
     a {
       padding: 0.4rem 0.8rem;
@@ -129,26 +142,26 @@ button {
 
 
 .delete {
-  background-color: $red-delete;
-  color: $white;
+  background-color: $yellow;
+  color: $font-color;
 }
 
 .delete:hover {
-  background-color: $red-delete-hover;
+  background-color: $yellow-hover;
 }
 
 button.report {
-  background-color: $blue;
+  background-color: $green;
   color: $white;
 }
 
 button.report:hover {
-  background-color: $blue-hover;
+  background-color: $green-hover;
 }
 
 .plotly-chart {
   margin-top: 2rem;
-  background: $white;
+  background: $green;
   padding: 1rem;
   box-shadow: 0 0 8px $black-shadow;
   border-radius: 8px;

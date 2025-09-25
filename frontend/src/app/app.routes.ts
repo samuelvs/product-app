@@ -4,9 +4,9 @@ import { ProductGridComponent } from './pages/product/product-grid/product-grid'
 import { ProductFormComponent } from './pages/product/product-form/product-form';
 
 export const routes: Routes = [
-  { path: '', component: ProductGridComponent },
-  { path: 'products', component: ProductListComponent },
-  { path: 'products/new', component: ProductFormComponent },
-  { path: 'products/:id/edit', component: ProductFormComponent },
+  { path: '', component: ProductListComponent },
+  { path: 'busca', component: ProductGridComponent },
+  { path: 'produtos/novo', component: ProductFormComponent },
+  { path: 'produtos/:id/editar', component: ProductFormComponent },
   { path: '**', redirectTo: '' }
 ];

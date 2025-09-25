@@ -1,11 +1,22 @@
 @import 'variables.scss';
 
+main {
+  margin: 0px 30px;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: 0px;
   margin-bottom: 1.5rem;
-  color: $black;
+  color: $white;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 60px;
+  background-color: $green;
+  align-content: center;
 }
 
 .filters {
@@ -55,7 +66,7 @@
 
   .card .price {
     font-weight: bold;
-    color: $blue;
+    color: $green;
     margin-bottom: 0.5rem;
   }
 

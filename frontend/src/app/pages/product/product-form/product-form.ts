@@ -15,6 +15,7 @@ export class ProductFormComponent implements OnInit {
   currentId = signal<number>(0);
   selectedFile = signal<File | null>(null);
   previewUrl = signal<string | ArrayBuffer | null>(null);
+  categories: string[] = ["Eletrônicos", "Eletrodomésticos", "Móveis", "Casa", "Esportes", "Moda", "Brinquedos", "Beleza", "Livros"];
 
   constructor(private fb: FormBuilder, private productService: ProductService, private route: ActivatedRoute, private router: Router) {
     this.form = this.fb.group({
@@ -66,6 +67,6 @@ export class ProductFormComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/products']);
+    this.router.navigate(['/']);
   }
 }

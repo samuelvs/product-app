@@ -31,7 +31,7 @@ export class ProductGridComponent implements OnInit {
     this.handleFilter(undefined, this.currentPage());
   }
 
-  handleFilter(filters?: ProductFilter, page: number = 1) {   
+  handleFilter(filters?: ProductFilter, page: number = 1) {     
     this.filters.set(filters);
     this.productService.list(filters, page, this.itemsPerPage()).subscribe((res: any) => {
       this.products.set(res.results || []);
@@ -40,10 +40,12 @@ export class ProductGridComponent implements OnInit {
     });
   }
 
-  onPageChange(page: number) {
+  onPageChange(page: number) {    
     this.currentPage.set(page);
-    this.productService.list(undefined, page, this.itemsPerPage()).subscribe((res: any) => {
-      this.products.set(res.results || res);
+    this.handleFilter(this.filters(), page);    
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   }
 }

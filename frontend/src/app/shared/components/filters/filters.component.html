@@ -14,17 +14,22 @@
   }
 </select>
 
-<input
-  type="number"
-  placeholder="Preço mínimo"
-  [(ngModel)]="filters().priceMin"
-  (input)="applyFilters()"
-/>
-
-<input
-  type="number"
-  placeholder="Preço máximo"
-  [(ngModel)]="filters().priceMax"
-  (input)="applyFilters()"
+<div class="prices">
+  <input
+    type="number"
+    placeholder="Preço mínimo"
+    [(ngModel)]="filters().priceMin"
+    (input)="applyFilters()"
   />
+  
+  <input
+    type="number"
+    placeholder="Preço máximo"
+    [(ngModel)]="filters().priceMax"
+    (input)="applyFilters()"
+  />
+</div>
+
+<button class="clean" (click)="handleCleanFilters()">Limpar</button>
+
 </div>
