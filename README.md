@@ -31,7 +31,6 @@ product-app/
 - O frontend utiliza **Angular Universal** para **Server-Side Rendering (SSR)**, melhorando:
   - **Performance** do carregamento inicial.
   - **SEO**, já que o conteúdo é renderizado no servidor e indexável pelos buscadores.
-  - Compartilhamento de URLs completas em redes sociais com preview do conteúdo.
 
 - O layout é totalmente responsivo, funcionando bem em desktops, tablets e dispositivos móveis.
 - Todas as imagens de produtos estão no diretório `media/products/` do backend.
